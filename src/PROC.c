@@ -238,6 +238,7 @@ int main(int argc, char * argv[]) {
 		//Print contents of the register file after each instruction
 		
 		printf("\nBegin cycle %d\n", i);
+		printf("ProgramCounter: %d\n", ProgramCounter);
 		printRegFile();//only suggested for Debug, comment this line to reduce output
 		
 		/********************************/
@@ -261,6 +262,12 @@ int main(int argc, char * argv[]) {
 		case OP_UNSPECIFIED:
 		{
 			switch (funct) {
+			case FUNCT_SRL:
+			{
+				int32_t a = getRegValue(rt);
+				setRegValue(rd, a >> shamt);
+				break;
+			}
 			case FUNCT_JR:
 			{
 				int32_t addr = getRegValue(rs);
@@ -341,6 +348,22 @@ int main(int argc, char * argv[]) {
 			{
 				int32_t value = getRegValue(rs);
 				setRegValue(33, value);
+				break;
+			}
+			case FUNCT_MULT:
+			{
+				uint64_t a = getRegValue(rs);
+				uint64_t b = getRegValue(rt);
+				uint64_t product = a * b;
+				setRegValue(32, product >> 32);
+				setRegValue(33, (product << 32) >> 32);
+				break;
+			}
+			case FUNCT_XOR:
+			{
+				int32_t a = getRegValue(rt);
+				int32_t b = getRegValue(rd);
+				setRegValue(rs, a ^ b);
 				break;
 			}
 			default:
