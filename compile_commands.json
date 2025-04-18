@@ -1,0 +1,62 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "eMIPS",
+      "src/elf_reader/elf_reader.c"
+    ],
+    "directory": "/home/tenzen/Project2",
+    "file": "/home/tenzen/Project2/src/elf_reader/elf_reader.c",
+    "output": "/home/tenzen/Project2/eMIPS"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "eMIPS",
+      "src/utils/heap.c"
+    ],
+    "directory": "/home/tenzen/Project2",
+    "file": "/home/tenzen/Project2/src/utils/heap.c",
+    "output": "/home/tenzen/Project2/eMIPS"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "eMIPS",
+      "src/RegFile.c"
+    ],
+    "directory": "/home/tenzen/Project2",
+    "file": "/home/tenzen/Project2/src/RegFile.c",
+    "output": "/home/tenzen/Project2/eMIPS"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "eMIPS",
+      "src/Syscall.c"
+    ],
+    "directory": "/home/tenzen/Project2",
+    "file": "/home/tenzen/Project2/src/Syscall.c",
+    "output": "/home/tenzen/Project2/eMIPS"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "eMIPS",
+      "src/PROC.c"
+    ],
+    "directory": "/home/tenzen/Project2",
+    "file": "/home/tenzen/Project2/src/PROC.c",
+    "output": "/home/tenzen/Project2/eMIPS"
+  }
+]
